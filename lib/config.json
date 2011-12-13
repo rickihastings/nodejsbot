@@ -1,0 +1,55 @@
+/*
+ * nodejsbot - http://github.com/n0valyfe/nodejsbot
+ * 
+ * IRC Bot framework made in node.js
+ */
+
+process.env["PORT"] = 1337;
+
+config = {
+	"debug": true,
+	"modules" : [
+		"basic.js",
+		//"calc.js",
+		//"google.js",
+		//"urban.js"
+	],
+	"server": {
+		"enabled": false,
+		"ip": "127.0.0.1",
+		"port": process.env.PORT,
+		"debug": false,
+		"dataHandler": function(data, from) {}
+	},
+	"webServer": {
+		"ip": "0.0.0.0",
+		"port": 1337
+	},
+	"irc": {
+		"nick": "Samantha",
+		"ident": "sam",
+		"realName": "FUCK YEAH",
+		"nsPass": "lulpass",
+		"server": "irc.ircnode.org",
+		"port": 6667,
+		"chans": {
+			"#lulz": "",
+			//"#ircnode": ""
+		},
+		"debug": false
+	},
+	"commandPrefix": ".",
+	"adminHosts": [
+		"vee.host"
+	],
+	
+	"responses": {
+		"invalidAccess": "Oi mush, you don't have access to do this!",
+		"currentlyIn": "I am currently in {num} channels.",
+		"outputChan": "- {chan}",
+		"cResult": "{sum} = {answer}",
+		"gResult": "{title} ({url})"
+	}
+}
+
+exports.config = config
