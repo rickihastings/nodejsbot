@@ -4,8 +4,6 @@
  * IRC Bot framework made in node.js
  */
 
-process.env["PORT"] = 1337;
-
 config = {
 	"debug": true,
 	"modules" : [
@@ -23,7 +21,7 @@ config = {
 	},
 	"webServer": {
 		"ip": "0.0.0.0",
-		"port": 1337
+		"port": process.env.PORT || 3000
 	},
 	"irc": {
 		"nick": "Samantha",
