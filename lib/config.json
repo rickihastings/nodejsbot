@@ -10,18 +10,19 @@ config = {
 		"basic.js",
 		//"calc.js",
 		//"google.js",
+		"seen.js",
 		//"urban.js"
 	],
 	"server": {
 		"enabled": false,
 		"ip": "127.0.0.1",
-		"port": process.env.PORT,
+		"port": 1337,
 		"debug": false,
 		"dataHandler": function(data, from) {}
 	},
 	"webServer": {
 		"ip": "0.0.0.0",
-		"port": process.env.PORT || 3000
+		"port": 3000
 	},
 	"irc": {
 		"nick": "Samantha",
@@ -46,8 +47,10 @@ config = {
 		"currentlyIn": "I am currently in {num} channels.",
 		"outputChan": "- {chan}",
 		"cResult": "{sum} = {answer}",
-		"gResult": "{title} ({url})"
+		"gResult": "{title} ({url})",
+		"lastSeenNick": "I last saw {nick} {time} ago saying: {message}",
+		"notSeenNick": "I have not seen {nick} before",
 	}
 }
 
-exports.config = config
+exports.config = config;
