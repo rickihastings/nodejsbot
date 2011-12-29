@@ -2,6 +2,7 @@
 	"name": "nodejsbot",
 	"version": "0.0.2",
 	"dependencies": {
-		"express": "2.2.0"
+		"express": "2.2.0",
+		"parrot": "0.3.0"
 	}
 }
